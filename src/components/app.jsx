@@ -17,17 +17,17 @@ class App extends Component {
       ],
       selectedGifId: "3o7qEc1FhfvPMjlSCI"
     };
-
-    this.search('test');
   }
 
   search = (query) => {
     giphy.search({
-      q: 'pokemon',
+      q: { query },
       limit: 10
-    }, function (err, res) {
+    }, (err, res) => {
       // Res contains gif data!
-      console.log(res);
+      this.setState({
+        gifs: res.data
+      });
     });
   }
 
@@ -35,7 +35,7 @@ class App extends Component {
     return (
       <div>
         <div className="left-scene">
-          <SearchBar />
+          <SearchBar searchFunction={this.search} />
           <div className="selected-gif">
             <Gif id={this.state.selectedGifId} />
           </div>
