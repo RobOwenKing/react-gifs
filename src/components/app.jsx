@@ -7,11 +7,19 @@ import GifList from './gif_list';
 const giphy = require('giphy-api')();
 
 class App extends Component {
-/*  constructor(props) {
+  constructor(props) {
+    super(props);
 
+    this.state = {
+      gifs: [
+        { id: "3o7qEc1FhfvPMjlSCI" },
+        { id: "E2USislQIlsfm" }
+      ],
+      selectedGifId: "3o7qEc1FhfvPMjlSCI"
+    }
   }
 
-  const search = (query) => {
+/*  const search = (query) => {
     giphy.search({
       q: 'pokemon',
       limit: 10
@@ -21,22 +29,17 @@ class App extends Component {
   }*/
 
   render() {
-    const gifs = [
-      { id: "3o7qEc1FhfvPMjlSCI" },
-      { id: "E2USislQIlsfm" }
-    ];
-
     return (
       <div>
         <div className="left-scene">
           <SearchBar />
           <div className="selected-gif">
-            <Gif id="3o7qEc1FhfvPMjlSCI" />
+            <Gif id={this.state.selectedGifId} />
           </div>
         </div>
         <div className="right-scene">
           <div className="gif-list">
-            <GifList gifs={gifs} />
+            <GifList gifs={this.state.gifs} />
           </div>
         </div>
       </div>
