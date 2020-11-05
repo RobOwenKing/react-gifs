@@ -9,8 +9,12 @@ import React, { Component } from 'react';
 };*/
 
 const SearchBar = () => {
+  const handleChange = (event) => {
+    console.log(event.target.value);
+  };
+
   return (
-    <input type="text" className="form-control form-search" />
+    <input type="text" className="form-control form-search" onChange={handleChange} />
   );
 };
 
