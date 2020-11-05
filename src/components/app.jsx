@@ -16,17 +16,20 @@ class App extends Component {
         { id: "E2USislQIlsfm" }
       ],
       selectedGifId: "3o7qEc1FhfvPMjlSCI"
-    }
+    };
+
+    this.search('test');
   }
 
-/*  const search = (query) => {
+  search = (query) => {
     giphy.search({
       q: 'pokemon',
       limit: 10
     }, function (err, res) {
       // Res contains gif data!
+      console.log(res);
     });
-  }*/
+  }
 
   render() {
     return (
