@@ -6,6 +6,11 @@ import GifList from './gif_list';
 
 class App extends Component {
   render() {
+    const gifs = [
+      { id: "3o7qEc1FhfvPMjlSCI" },
+      { id: "E2USislQIlsfm" }
+    ];
+
     return (
       <div>
         <div className="left-scene">
@@ -16,7 +21,7 @@ class App extends Component {
         </div>
         <div className="right-scene">
           <div className="gif-list">
-            <GifList />
+            <GifList gifs={gifs} />
           </div>
         </div>
       </div>
