@@ -4,7 +4,22 @@ import SearchBar from './search_bar';
 import Gif from './gif';
 import GifList from './gif_list';
 
+const giphy = require('giphy-api')();
+
 class App extends Component {
+/*  constructor(props) {
+
+  }
+
+  const search = (query) => {
+    giphy.search({
+      q: 'pokemon',
+      limit: 10
+    }, function (err, res) {
+      // Res contains gif data!
+    });
+  }*/
+
   render() {
     const gifs = [
       { id: "3o7qEc1FhfvPMjlSCI" },
