@@ -5,9 +5,9 @@ import Gif from './gif';
 class GifList extends Component {
   render() {
     return (
-      this.props.gifs.map((gif) => { return <Gif id={gif.id} key={gif.id} />; })
+      this.props.gifs.map(gif => <Gif id={gif.id} key={gif.id} />)
     );
   }
-};
+}
 
 export default GifList;
