@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import SearchBar from './search_bar';
 import Gif from './gif';
+import GifList from './gif_list';
 
 class App extends Component {
   render() {
@@ -13,7 +14,11 @@ class App extends Component {
             <Gif id="3o7qEc1FhfvPMjlSCI" />
           </div>
         </div>
-        <div className="right-scene"></div>
+        <div className="right-scene">
+          <div className="gif-list">
+            <GifList />
+          </div>
+        </div>
       </div>
     );
   }
