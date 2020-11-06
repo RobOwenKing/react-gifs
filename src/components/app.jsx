@@ -18,6 +18,8 @@ class App extends Component {
     };
   }
 
+  // Function to call the giphy API
+  // Passed to <SearchBar /> to be called from there
   search = (query) => {
     giphy('MFzKrICxFdlIKgpqMbloPeMXt3g8t2Mi').search({
       q: query,
@@ -29,6 +31,8 @@ class App extends Component {
     });
   }
 
+  // Function to change GIF in left scene to one clicked on in right scene
+  // Passed to <GifList /> then each <Gif />
   setSelected = (id) => {
     this.setState({ selectedGifId: id });
   }
