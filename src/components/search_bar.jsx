@@ -4,7 +4,8 @@ class SearchBar extends Component {
   // Called for each key stroke changing the input's value
   // Uses function passed from <App /> to call API with input's value
   handleChange = (event) => {
-    this.props.searchFunction(event.target.value);
+    const { searchFunction } = this.props;
+    searchFunction(event.target.value);
   };
 
   render() {

@@ -5,9 +5,10 @@ import Gif from './gif';
 class GifList extends Component {
   // For each gif in the passed array, return a <Gif /> component
   render() {
+    const { gifs, setSelected } = this.props;
     return (
-      this.props.gifs.map((gif) => {
-        return <Gif id={gif.id} key={gif.id} setSelected={this.props.setSelected} />;
+      gifs.map((gif) => {
+        return <Gif id={gif.id} key={gif.id} setSelected={setSelected} />;
       })
     );
   }
