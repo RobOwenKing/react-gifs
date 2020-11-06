@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
+import giphy from 'giphy-api';
 
 import SearchBar from './search_bar';
 import Gif from './gif';
 import GifList from './gif_list';
-
-const giphy = require('giphy-api')();
 
 class App extends Component {
   constructor(props) {
@@ -20,8 +19,8 @@ class App extends Component {
   }
 
   search = (query) => {
-    giphy.search({
-      q: { query },
+    giphy('MFzKrICxFdlIKgpqMbloPeMXt3g8t2Mi').search({
+      q: query,
       limit: 10
     }, (err, res) => {
       // Res contains gif data!
