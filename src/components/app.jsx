@@ -23,7 +23,6 @@ class App extends Component {
       q: query,
       limit: 10
     }, (err, res) => {
-      // Res contains gif data!
       this.setState({
         gifs: res.data
       });

@@ -10,7 +10,9 @@ class Gif extends Component {
     // const id = "E2USislQIlsfm";
     const src = `https://media3.giphy.com/media/${this.props.id}/giphy.gif`;
     return (
-      <img src={src} className="gif" onClick={this.handleClick}></img>
+      <div onClick={this.handleClick} onKeyDown={this.handleClick} role="menuitem" tabIndex={0}>
+        <img src={src} className="gif" alt="" />
+      </div>
     );
   }
 }
